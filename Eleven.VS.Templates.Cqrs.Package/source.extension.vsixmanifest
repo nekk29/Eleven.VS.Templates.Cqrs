@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" ?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="Eleven.VS.Templates.Cqrs.Package.ee0aee2e-e4cd-45a3-80f9-ac2b596fa8d1" Version="1.0" Language="en-US" Publisher="Nelsson José" />
+        <DisplayName>Eleven.VS.Templates.Cqrs.Package</DisplayName>
+        <Description xml:space="preserve">Eleven n-layered domain-oriented architecture project template using CQRS, Api Services and Angular</Description>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 16.0)" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Eleven.VS" d:TargetPath="|Eleven.VS;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="Eleven.VS.Templates.Cqrs.Wizard" Path="|Eleven.VS.Templates.Cqrs.Wizard|" AssemblyName="|Eleven.VS.Templates.Cqrs.Wizard;AssemblyName|" />
+        <Asset Type="entityframework.6.2.0.nupkg" d:Source="File" Path="Packages\entityframework.6.2.0.nupkg" d:VsixSubPath="Packages" />
+        <Asset Type="npoco.3.9.4.nupkg" d:Source="File" Path="Packages\npoco.3.9.4.nupkg" d:VsixSubPath="Packages" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>

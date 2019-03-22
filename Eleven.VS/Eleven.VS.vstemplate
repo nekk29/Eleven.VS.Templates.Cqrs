@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+	<TemplateData>
+		<Name>Eleven N-Layered CQRS + Api Services + Angular</Name>
+		<Description>Eleven n-layered domain-oriented architecture project template using CQRS, Api Services and Angular</Description>
+		<Icon>Eleven.VS.ico</Icon>
+		<ProjectType>CSharp</ProjectType>
+		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+		<SortOrder>1000</SortOrder>
+		<TemplateID>0f717b51-afd2-4caf-91d7-353c98165764</TemplateID>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>Company.Module</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectCollection>
+			<SolutionFolder Name="$a_solutionfoldermodeling$" CreateOnDisk="false">
+			</SolutionFolder>
+			<SolutionFolder Name="$b_solutionfolderlayers$" CreateOnDisk="false">
+				<SolutionFolder Name="$b_solutionfolderlayers_1_presentation$" CreateOnDisk="false">
+					<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_1_mobile$" CreateOnDisk="false">
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_1_mobile_xamarin$" CreateOnDisk="false">
+						</SolutionFolder>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_2_ria$" CreateOnDisk="false">
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_2_ria_silverlightclient$" CreateOnDisk="false">
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_2_ria_silverlightmobile$" CreateOnDisk="false">
+						</SolutionFolder>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_3_web$" CreateOnDisk="false">
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_3_web_angularclient$" CreateOnDisk="false">
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_3_web_aspnetclient$" CreateOnDisk="false">
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_3_web_aspnetmvcclient$" CreateOnDisk="false">
+						</SolutionFolder>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_4_windows$" CreateOnDisk="false">
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_4_windows_obaclient$" CreateOnDisk="false">
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_4_windows_winformclient$" CreateOnDisk="false">
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_1_presentation_4_windows_wpfclient$" CreateOnDisk="false">
+						</SolutionFolder>
+					</SolutionFolder>
+				</SolutionFolder>
+				<SolutionFolder Name="$b_solutionfolderlayers_2_distributedservices$" CreateOnDisk="false">
+					<SolutionFolder Name="$b_solutionfolderlayers_2_distributedservices_1_core$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.DistributedServices.Core">
+							DistributedServices.Core\DistributedServices.Core.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_2_distributedservices_2_main$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.DistributedServices.Main">
+							DistributedServices.Main\DistributedServices.Main.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_2_distributedservices_3_security$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.DistributedServices.Security">
+							DistributedServices.Security\DistributedServices.Security.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_2_distributedservices_4_deployment$" CreateOnDisk="false">
+					</SolutionFolder>
+				</SolutionFolder>
+				<SolutionFolder Name="$b_solutionfolderlayers_3_application$" CreateOnDisk="false">
+					<SolutionFolder Name="$b_solutionfolderlayers_3_application_1_core$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Application.Core">
+							Application.Core\Application.Core.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_3_application_2_main$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Application.Main">
+							Application.Main\Application.Main.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_3_application_3_security$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Application.Security">
+							Application.Security\Application.Security.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+				</SolutionFolder>
+				<SolutionFolder Name="$b_solutionfolderlayers_4_domain$" CreateOnDisk="false">
+					<SolutionFolder Name="$b_solutionfolderlayers_4_domain_1_core$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Core">
+							Domain.Core\Domain.Core.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Core.Entities" CopyParameters="true">
+							Domain.Core.Entities\Domain.Core.Entities.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Core.Dtos" CopyParameters="true">
+							Domain.Core.Dtos\Domain.Core.Dtos.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_4_domain_2_main$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Main.Command">
+							Domain.Main.Command\Domain.Main.Command.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Main.Query">
+							Domain.Main.Query\Domain.Main.Query.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Main.Entities" CopyParameters="true">
+							Domain.Main.Entities\Domain.Main.Entities.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Main.Dtos" CopyParameters="true">
+							Domain.Main.Dtos\Domain.Main.Dtos.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_4_domain_3_security$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Security.Command">
+							Domain.Security.Command\Domain.Security.Command.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Security.Query">
+							Domain.Security.Query\Domain.Security.Query.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Security.Entities" CopyParameters="true">
+							Domain.Security.Entities\Domain.Security.Entities.vstemplate
+						</ProjectTemplateLink>
+						<ProjectTemplateLink ProjectName="$safeprojectname$.Domain.Security.Dtos" CopyParameters="true">
+							Domain.Security.Dtos\Domain.Security.Dtos.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+				</SolutionFolder>
+				<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure$" CreateOnDisk="false">
+					<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data$" CreateOnDisk="false">
+						<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_repository$" CreateOnDisk="false">
+							<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_repository_interfaces$" CreateOnDisk="false">
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Interfaces.Core" CopyParameters="true">
+									Repository.Interfaces.Core\Repository.Interfaces.Core.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Interfaces.Main">
+									Repository.Interfaces.Main\Repository.Interfaces.Main.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Interfaces.Security" CopyParameters="true">
+									Repository.Interfaces.Security\Repository.Interfaces.Security.vstemplate
+								</ProjectTemplateLink>
+							</SolutionFolder>
+							<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_repository_implementation$" CreateOnDisk="false">
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Entity.Core" CopyParameters="true">
+									Repository.Entity.Core\Repository.Entity.Core.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Entity.Main">
+									Repository.Entity.Main\Repository.Entity.Main.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.Repository.Entity.Security" CopyParameters="true">
+									Repository.Entity.Security\Repository.Entity.Security.vstemplate
+								</ProjectTemplateLink>
+							</SolutionFolder>
+						</SolutionFolder>
+						<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_dataaccess$" CreateOnDisk="false">
+							<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_dataaccess_interfaces$" CreateOnDisk="false">
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.Interfaces.Core" CopyParameters="true">
+									DataAccess.Interfaces.Core\DataAccess.Interfaces.Core.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.Interfaces.Main">
+									DataAccess.Interfaces.Main\DataAccess.Interfaces.Main.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.Interfaces.Security" CopyParameters="true">
+									DataAccess.Interfaces.Security\DataAccess.Interfaces.Security.vstemplate
+								</ProjectTemplateLink>
+							</SolutionFolder>
+							<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_1_data_dataaccess_implementation$" CreateOnDisk="false">
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.NPoco.Core" CopyParameters="true">
+									DataAccess.NPoco.Core\DataAccess.NPoco.Core.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.NPoco.Main">
+									DataAccess.NPoco.Main\DataAccess.NPoco.Main.vstemplate
+								</ProjectTemplateLink>
+								<ProjectTemplateLink ProjectName="$safeprojectname$.DataAccess.NPoco.Security" CopyParameters="true">
+									DataAccess.NPoco.Security\DataAccess.NPoco.Security.vstemplate
+								</ProjectTemplateLink>
+							</SolutionFolder>
+						</SolutionFolder>
+					</SolutionFolder>
+					<SolutionFolder Name="$b_solutionfolderlayers_5_infraestructure_2_crosscutting$" CreateOnDisk="false">
+						<ProjectTemplateLink ProjectName="$safeprojectname$.CrossCutting.Common" CopyParameters="true">
+							CrossCutting.Common\CrossCutting.Common.vstemplate
+						</ProjectTemplateLink>
+					</SolutionFolder>
+				</SolutionFolder>
+			</SolutionFolder>
+			<SolutionFolder Name="$c_solutionfolderdatabase$" CreateOnDisk="false">
+				<ProjectTemplateLink ProjectName="$safeprojectname$.DataBase.Implementation" CopyParameters="true">
+					DataBase.Implementation\DataBase.Implementation.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="$d_solutionfoldersolutionitems$" CreateOnDisk="false">
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Eleven.VS.Templates.Cqrs.Wizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=17b33234b960994c</Assembly>
+		<FullClassName>Eleven.VS.Templates.Cqrs.Wizard.TemplateWizardResourcesWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>
